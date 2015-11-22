@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.delegate = self
         collection.dataSource = self
         searchBar.delegate = self
-        initAudio()
+      //  initAudio()
         parsePokemonCSV()
     }
     
