@@ -82,8 +82,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        var poke : Pokemon!
+        if isInSearchMode{
+            poke = filteredPokemons[indexPath.row]
+        }else{
+            poke = pokemon[indexPath.row]
+        }
+        performSegueWithIdentifier("PokemonDetail", sender: poke)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -123,6 +129,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         view.endEditing(true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetail" {
+            if let detailVC = segue.destinationViewController as? PokemonDetailViewController {
+                if let poke = sender as? Pokemon {
+                    detailVC.pokemon = poke
+                }
+            }
+        }
     }
 
 }
