@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="55" id="bEQ-iq-omS"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.10000000000000001" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-eG-57Z">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-eG-57Z">
                                 <rect key="frame" x="20" y="119" width="560" height="461"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -41,7 +41,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fgv-M0-kO1" customClass="PokeCell" customModule="PokeDex" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="fgv-M0-kO1" customClass="PokeCell" customModule="PokeDex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -68,6 +68,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="SQv-sv-7Sv" firstAttribute="top" secondItem="fgv-M0-kO1" secondAttribute="top" id="1zJ-Sv-7fJ"/>
                                             <constraint firstItem="SQv-sv-7Sv" firstAttribute="leading" secondItem="fgv-M0-kO1" secondAttribute="leading" id="BOB-uS-WVn"/>
@@ -109,6 +110,9 @@
                             <constraint firstAttribute="trailing" secondItem="LcA-sQ-dOS" secondAttribute="trailing" id="tNI-jU-Jup"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="b1Z-eG-57Z" id="8Mf-na-He2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
