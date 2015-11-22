@@ -17,6 +17,7 @@ class PokeCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         self.layer.cornerRadius = 5.0
     }
     
