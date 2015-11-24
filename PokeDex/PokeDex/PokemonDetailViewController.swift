@@ -11,7 +11,7 @@ import UIKit
 class PokemonDetailViewController: UIViewController {
     var pokemon : Pokemon!
 
-    @IBOutlet weak var mainImag: UIImageView!
+    @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -31,6 +31,10 @@ class PokemonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        nameLabel.text = pokemon.name
+        mainImage.image = UIImage(named: "\(pokemon.pokedexID)")
+        pokemon.downloadPokemonDetails { () -> () in
+        }
     }
     
     @IBAction func backButtonPressed(sender: UIButton) {

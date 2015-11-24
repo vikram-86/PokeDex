@@ -252,7 +252,7 @@
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air/ Psychic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-hQ-SSB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air/ Psychic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-hQ-SSB">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="74"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -428,7 +428,8 @@
                         <outlet property="defenceLabel" destination="jCJ-96-1vQ" id="ltm-qa-aFC"/>
                         <outlet property="descriptionLabel" destination="79a-Nm-9Er" id="o3r-Td-Cdx"/>
                         <outlet property="heightLabel" destination="MrR-LZ-45v" id="pwe-2S-RU1"/>
-                        <outlet property="mainImag" destination="yZ2-oL-xCV" id="FxH-3R-L9j"/>
+                        <outlet property="mainImage" destination="yZ2-oL-xCV" id="RnZ-9k-wcA"/>
+                        <outlet property="nameLabel" destination="5tL-K2-zQW" id="zok-KO-UjE"/>
                         <outlet property="nextEVOLabel" destination="YDa-k5-djG" id="bWS-wG-XDa"/>
                         <outlet property="pokedexLabel" destination="MOm-za-gwH" id="sCN-S1-0YH"/>
                         <outlet property="typeLabel" destination="UNN-hQ-SSB" id="ofy-qY-bu2"/>
